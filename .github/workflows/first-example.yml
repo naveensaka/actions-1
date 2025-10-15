@@ -10,13 +10,19 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v5
 
-        - name: Welcome Message
-          run: echo "My FIrst Guthub Actions Job"
+        - name: List and Read File
+          run: |
+            echo "My FIrst Guthub Actions Job"
+            ls -ltra
+            cat README.md
 
-        - name: List files
-          run: ls
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
 
-        - name: Read files
-          run: cat README.md
+#        - name: List files
+#          run: ls
+
+#        - name: Read files
+#          run: cat README.md
 
           
